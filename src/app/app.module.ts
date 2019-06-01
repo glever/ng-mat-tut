@@ -11,6 +11,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,7 +23,8 @@ import { AppComponent } from './app.component';
     // Material
     MatButtonModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
