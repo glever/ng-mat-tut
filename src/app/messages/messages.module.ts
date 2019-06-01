@@ -3,12 +3,27 @@ import { CommonModule } from '@angular/common';
 
 import { MessagesRoutingModule } from './messages-routing.module';
 import { MessageListComponent } from './message-list/message-list.component';
+import { MessageNewComponent } from './message-new/message-new.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {
+  MatButtonModule,
+  MatFormFieldModule, MatIconModule,
+  MatInputModule,
+  MatStepperModule
+} from '@angular/material';
 
 @NgModule({
-  declarations: [MessageListComponent],
+  declarations: [MessageListComponent, MessageNewComponent],
   imports: [
     CommonModule,
-    MessagesRoutingModule
+    MessagesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatStepperModule,
+    MatIconModule
   ]
 })
-export class MessagesModule { }
+export class MessagesModule {}
