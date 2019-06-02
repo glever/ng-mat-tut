@@ -3,10 +3,32 @@ import { CommonModule } from '@angular/common';
 
 import { OrdersRoutingModule } from './orders-routing.module';
 import { OrderListComponent } from './order-list/order-list.component';
-import { MatTabsModule } from '@angular/material';
+import {
+  MatButtonModule, MatCardModule,
+  MatDatepickerModule,
+  MatIconModule,
+  MatInputModule,
+  MatTabsModule
+} from '@angular/material';
+import { OrderNewComponent } from './order-new/order-new.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
-  declarations: [OrderListComponent],
-  imports: [MatTabsModule, CommonModule, OrdersRoutingModule]
+  declarations: [OrderListComponent, OrderNewComponent],
+  imports: [
+    MatTabsModule,
+    CommonModule,
+    OrdersRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatDatepickerModule,
+    MatIconModule,
+    MatInputModule,
+    MatMomentDateModule,
+    MatCardModule
+  ]
 })
 export class OrdersModule {}

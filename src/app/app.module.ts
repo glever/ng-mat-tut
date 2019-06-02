@@ -11,7 +11,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatMenuModule, MatToolbarModule } from '@angular/material';
+import {
+  MAT_DATE_LOCALE,
+  MatMenuModule,
+  MatToolbarModule
+} from '@angular/material';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +31,7 @@ import { MatMenuModule, MatToolbarModule } from '@angular/material';
     MatToolbarModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: 'nl-BE' }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
