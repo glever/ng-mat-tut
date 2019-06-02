@@ -4,10 +4,13 @@ import { CommonModule } from '@angular/common';
 import { OrdersRoutingModule } from './orders-routing.module';
 import { OrderListComponent } from './order-list/order-list.component';
 import {
-  MatButtonModule, MatCardModule,
+  MatButtonModule,
+  MatCardModule, MatCheckboxModule,
   MatDatepickerModule,
   MatIconModule,
   MatInputModule,
+  MatSortModule,
+  MatTableModule,
   MatTabsModule
 } from '@angular/material';
 import { OrderNewComponent } from './order-new/order-new.component';
@@ -28,7 +31,10 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatIconModule,
     MatInputModule,
     MatMomentDateModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatSortModule,
+    MatCheckboxModule
   ]
 })
 export class OrdersModule {}
