@@ -7,10 +7,13 @@ import { MessageNewComponent } from './message-new/message-new.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocompleteModule,
-  MatButtonModule, MatCardModule,
-  MatFormFieldModule, MatIconModule,
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatIconModule,
   MatInputModule,
-  MatStepperModule
+  MatStepperModule,
+  MatTooltipModule
 } from '@angular/material';
 
 @NgModule({
@@ -26,7 +29,8 @@ import {
     MatStepperModule,
     MatIconModule,
     MatAutocompleteModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
   ]
 })
 export class MessagesModule {}
