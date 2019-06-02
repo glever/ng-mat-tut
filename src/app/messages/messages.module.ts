@@ -7,7 +7,7 @@ import { MessageNewComponent } from './message-new/message-new.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocompleteModule,
-  MatButtonModule,
+  MatButtonModule, MatCardModule,
   MatFormFieldModule, MatIconModule,
   MatInputModule,
   MatStepperModule
@@ -25,7 +25,8 @@ import {
     MatInputModule,
     MatStepperModule,
     MatIconModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatCardModule
   ]
 })
 export class MessagesModule {}
