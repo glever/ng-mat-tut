@@ -2,14 +2,55 @@
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Enter recipient info</ng-template>
-      <mat-form-field>
-        <input
-          matInput
-          placeholder="Email"
-          formControlName="emailCtrl"
-          required
-        />
-      </mat-form-field>
+      <div>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Email"
+            formControlName="emailCtrl"
+            required
+          />
+        </mat-form-field>
+      </div>
+
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            formControlName="priorityCtrl"
+            placeholder="priority"
+            matInput
+            [matAutocomplete]="autoPriority"
+            required
+          />
+          <mat-autocomplete autoActiveFirstOption #autoPriority="matAutocomplete">
+            <mat-option *ngFor="let priority of priorities" [value]="priority">
+              {{ priority }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            formControlName="departmentCtrl"
+            placeholder="department"
+            matInput
+            [matAutocomplete]="autoDepartment"
+            required
+          />
+          <mat-autocomplete autoActiveFirstOption #autoDepartment="matAutocomplete" [displayWith]="getDepartmentName">
+            <mat-option
+              *ngFor="let department of departments"
+              [value]="department"
+            >
+              {{ department.name }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </p>
+
       <div>
         <button mat-icon-button matStepperNext>
           <mat-icon>arrow_forward</mat-icon>

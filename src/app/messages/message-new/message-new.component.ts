@@ -9,15 +9,35 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class MessageNewComponent implements OnInit {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  priorities: string[] = ['High', 'Medium', 'Low'];
+  departments: object[] = [
+    {
+      id: 1,
+      name: 'Complaints'
+    },
+    {
+      id: 2,
+      name: 'Loyalty'
+    },
+    {
+      id: 3,
+      name: 'Promotions'
+    }
+  ];
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.firstFormGroup = this.formBuilder.group({
-      emailCtrl: ['', Validators.required]
+      emailCtrl: ['', Validators.required],
+      departmentCtrl: ['', Validators.required]
     });
     this.secondFormGroup = this.formBuilder.group({
       messageCtrl: ['', Validators.required]
     });
+  }
+
+  getDepartmentName(value: any) {
+    return value ? value.name : undefined;
   }
 }
