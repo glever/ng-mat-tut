@@ -7,17 +7,22 @@ import { CustomerCardComponent } from './customer-card/customer-card.component';
 import {
   MatButtonModule,
   MatCardModule,
+  MatDialog,
+  MatDialogModule,
   MatIconModule,
-  MatInputModule
+  MatInputModule,
+  MatRadioModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerNewComponent } from './customer-new/customer-new.component';
+import { RepDialogComponent } from './rep-dialog/rep-dialog.component';
 
 @NgModule({
   declarations: [
     CustomerListComponent,
     CustomerCardComponent,
-    CustomerNewComponent
+    CustomerNewComponent,
+    RepDialogComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +32,10 @@ import { CustomerNewComponent } from './customer-new/customer-new.component';
     MatButtonModule,
     MatCardModule,
     MatIconModule,
-    MatInputModule
-  ]
+    MatInputModule,
+    MatDialogModule,
+    MatRadioModule
+  ],
+  entryComponents: [RepDialogComponent]
 })
 export class CustomersModule {}
