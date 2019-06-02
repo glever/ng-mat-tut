@@ -7,11 +7,11 @@ import { CustomerCardComponent } from './customer-card/customer-card.component';
 import {
   MatButtonModule,
   MatCardModule,
-  MatDialog,
   MatDialogModule,
   MatIconModule,
   MatInputModule,
-  MatRadioModule
+  MatRadioModule,
+  MatSnackBarModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerNewComponent } from './customer-new/customer-new.component';
@@ -34,7 +34,8 @@ import { RepDialogComponent } from './rep-dialog/rep-dialog.component';
     MatIconModule,
     MatInputModule,
     MatDialogModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSnackBarModule
   ],
   entryComponents: [RepDialogComponent]
 })

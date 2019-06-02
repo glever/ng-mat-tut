@@ -40,6 +40,11 @@
   </mat-card-content>
 
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="openRepDialog()">SAVE</button>
+    <button mat-raised-button color="primary" (click)="openRepDialog()">
+      SAVE (dialog)
+    </button>
+    <button mat-raised-button color="primary" (click)="openUndoSnackbar()">
+      SAVE (snackbar)
+    </button>
   </mat-card-actions>
 </mat-card>
