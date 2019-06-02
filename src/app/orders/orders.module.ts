@@ -5,10 +5,12 @@ import { OrdersRoutingModule } from './orders-routing.module';
 import { OrderListComponent } from './order-list/order-list.component';
 import {
   MatButtonModule,
-  MatCardModule, MatCheckboxModule,
+  MatCardModule,
+  MatCheckboxModule,
   MatDatepickerModule,
   MatIconModule,
   MatInputModule,
+  MatPaginatorModule,
   MatSortModule,
   MatTableModule,
   MatTabsModule
@@ -34,7 +36,8 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
     MatCardModule,
     MatTableModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatPaginatorModule
   ]
 })
 export class OrdersModule {}
